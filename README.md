@@ -9,9 +9,10 @@ This multi-page responsive website highlights key regions, history, and attracti
 - Custom styling and image assets
 
 ## Technologies Used
-HTML · CSS · JavaScript · GitHub Pages · Figma
+HTML · CSS · JavaScript · GitHub · Figma · Visual Studio
 
 ## Live Site
-🌐 [View Website](https://brittnebaila.github.io/washington-state-website)
+https://brittnebaila.github.io/washington-state-website
 
 ## Case Study
+https://brittne.myportfolio.com/washington-state-website
