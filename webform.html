@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet"></head>
+    <link rel="icon" href="images/washington/wa-favicon.png" type="image/png">
+</head>
+<body>
+  <header>
+    <h1>
+        <a href="index.html">
+          <img src="images/washington/walogo.png" alt="logo" class="logo">
+        </a>
+      </h1>
+    <nav class="nav">
+        <ul>
+          <li>
+            <a href="#unique-cities">Cities</a>
+            <ul class="dropdown">
+              <li><a href="olympia.html">Olympia</a></li>
+              <li><a href="poulsbo.html">Poulsbo</a></li>
+              <li><a href="winthrop.html">Winthrop</a></li>
+              <li><a href="leavenworth.html">Leavenworth</a></li>
+              <li><a href="http://www.seattle.gov">Seattle</a></li>
+            </ul>
+          </li>
+      
+          <li>
+            <a href="#parks-section">National Parks</a>
+            <ul class="dropdown">
+              <li>
+                <a href="https://www.nps.gov/mora/index.htm" target="_blank" rel="noopener noreferrer">Mount Rainier</a>
+            </li>
+            <li>
+                <a href="https://www.nps.gov/mora/index.htm" target="_blank" rel="noopener noreferrer">Olympic</a>
+            </li>
+            <li>
+                <a href="https://www.nps.gov/noca/index.htm" target="_blank" rel="noopener noreferrer">North Cascades</a>
+            </li>
+            </ul>
+          </li>
+      
+          <li><a href="webform.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div id="contact" class="form-background">
+    <section id="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contact-form" action="#" method="post">
+            <!-- First Name -->
+            <div class="form-group">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+            </div>
+
+            <!-- Last Name -->
+            <div class="form-group">
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+
+            <!-- Confirm Email -->
+            <div class="form-group">
+                <label for="confirm-email">Confirm Email Address:</label>
+                <input type="email" id="confirm-email" name="confirm-email" placeholder="Re-enter your email address" required>
+            </div>
+
+            <!-- Question -->
+            <div class="form-group">
+                <label for="question">Your Question:</label>
+                <textarea id="question" name="question" rows="5" placeholder="Ask your question here..." required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+    </section>
+    </div>
+</main>
+    <footer>
+    <p>&copy; 2025 Washington State Tourism. All rights reserved. Design by Brittne Valdivia</p>
+    </footer>
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+          const email = document.getElementById("email").value;
+          const confirmEmail = document.getElementById("confirm-email").value;
+      
+          if (email !== confirmEmail) {
+            event.preventDefault(); // Stop the form from submitting
+            alert("Email addresses do not match. Please double-check.");
+          }
+        });
+      </script>
+      
+</body>
+</html>

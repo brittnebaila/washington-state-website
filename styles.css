@@ -1,0 +1,1171 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+  
+  img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  }
+  
+  
+  html {
+  scroll-behavior: smooth;
+  }
+
+  main {
+    max-width: 100%; /* Limit the width of the main content */
+    margin: 0 auto; /* Center the main content */
+  }
+
+
+  /* Header Container */
+  header {
+    display: flex;
+    justify-content: center; /* Center the navigation bar */
+    align-items: center; /* Align items vertically */
+    flex-wrap: wrap; /* Allow stacking on smaller screens */
+    background-color: white;
+    padding: 10px 20px;
+    gap: 20px; /* Space between items */
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Keeps it on top of other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+
+  
+  body {
+  font-family: 'Montserrat', sans-serif;
+  }
+  
+  footer {
+  background-color: #f5f5f5; /* light gray */
+  color: #333;
+  text-align: center;
+  padding: 20px 40px;
+  font-size: 0.9rem;
+  border-top: 1px solid #ddd;
+  }
+  
+  footer p {
+  margin: 0;
+  line-height: 1.6;
+  }
+  
+  
+  
+  /* Logo */
+  .logo {
+  max-height: 70px;
+  }
+  
+  /* Navigation */
+  /* Center the Navigation Bar */
+/* Navigation Bar */
+.nav {
+  display: flex;
+  justify-content: center; /* Center the navigation bar horizontally */
+  align-items: center; /* Align items vertically */
+  background-color: white; /* White background for the nav bar */
+  padding: 10px 20px; /* Add padding for spacing */
+  position: sticky; /* Make the nav bar sticky */
+  top: 0; /* Stick to the top of the page */
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.nav ul {
+  list-style: none; /* Remove default list styling */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Align items horizontally */
+  gap: 20px; /* Add spacing between menu items */
+}
+
+.nav ul li {
+  position: relative; /* Needed for dropdown positioning */
+}
+
+.nav ul li a {
+  display: block;
+  padding: 10px 20px; /* Add padding for clickable area */
+  color: #333; /* Text color */
+  text-decoration: none; /* Remove underline */
+  text-align: center;
+  font-size: 20px; /* Font size for main menu items */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav ul li a:hover {
+  background-color: #f0f0f0; /* Light gray background on hover */
+}
+
+.nav ul li a.active {
+  background-color: #ddd; /* Active link background */
+  color: #000; /* Active link text color */
+}
+
+/* Dropdown Menu */
+.nav ul li ul.dropdown {
+  position: absolute; /* Position dropdown relative to parent <li> */
+  top: 100%; /* Position below the parent menu item */
+  left: 0; /* Align dropdown with the parent <li> */
+  background-color: white; /* White background for dropdown */
+  display: none; /* Hide dropdown by default */
+  list-style: none; /* Remove default list styling */
+  padding: 10px 0; /* Add padding inside the dropdown */
+  z-index: 1000; /* Ensure dropdown is above other content */
+  min-width: 200px; /* Set a minimum width for the dropdown */
+}
+
+/* Show Dropdown on Hover */
+.nav ul li:hover ul.dropdown {
+  display: block; /* Show dropdown when hovering over the parent <li> */
+}
+
+/* Dropdown Items */
+.nav ul li ul.dropdown li {
+  display: block; /* Stack dropdown items vertically */
+}
+
+.nav ul li ul.dropdown li a {
+  padding: 10px 20px; /* Add padding for dropdown items */
+  font-size: 16px; /* Smaller font size for dropdown items */
+  color: #333; /* Text color */
+  text-decoration: none; /* Remove underline */
+  display: block; /* Ensure dropdown items are block-level elements */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect for Dropdown Items */
+.nav ul li ul.dropdown li a:hover {
+  background-color: #f0f0f0; /* Light gray background on hover */
+}
+
+/* Responsive Navigation for Smaller Screens */
+@media (max-width: 768px) {
+  .nav ul {
+      flex-direction: column; /* Stack menu items vertically */
+      gap: 10px; /* Reduce spacing between items */
+  }
+
+  .nav ul li ul.dropdown {
+      position: static; /* Remove absolute positioning for dropdowns */
+      box-shadow: none; /* Remove shadow for simplicity */
+      border: none; /* Remove border */
+  }
+
+  .nav ul li ul.dropdown li a {
+      padding: 10px; /* Adjust padding for smaller screens */
+  }
+}
+
+
+  
+  /* Main Content */ 
+  /*Hero Section*/
+
+
+  .index-hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .scenery {
+    width: 100%;
+    height: 95%;
+    background-image: url('images/washington/washington.cover.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Keeps the background behind the content */
+  }
+  
+  .hero-title {
+    font-family: 'Satisfy', cursive;
+    font-size: 8rem;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    z-index: 1;
+  }
+
+  /* Container for centered text in index hero */
+.index-hero-content {
+  text-align: center;
+  z-index: 2;
+}
+
+/* Subtitle styling */
+.hero-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Explore button styling */
+.index-explore-button {
+  font-size: 1.25rem;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #222;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.index-explore-button:hover {
+  background-color: #333;
+  color: white;
+}
+
+  
+  
+#about {
+  text-align: center;
+  background-color: #037E73;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  display: flex; /* Use Flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  gap: 20px; /* Add spacing between elements */
+}
+
+.about-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  gap: 10%; /* Add spacing between text and image */
+  max-width: 1200px; /* Limit the width of the content */
+  margin: 0 auto; /* Center the layout within the section */
+}
+
+.about-text {
+  flex: 1 1 400px; /* Allow the text to grow/shrink */
+  text-align: center; /* Center-align the text */
+}
+
+#about h2 {
+  padding: 5px 0;
+  font-size: 3em;
+  color: #ffffff;
+}
+  
+#about h3 {
+  font-weight: normal;
+  color: white;
+  margin-top: 5px;
+}
+  
+#about p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: white;
+  margin-top: 20px;
+}
+  
+.washington-video {
+  padding: 10px;
+  width: 500px;
+  height: auto;
+  display: inline-block;
+  overflow: hidden; /* Prevents overflow */
+  object-fit: cover; /* Optional: ensures good cropping if you constrain height */
+}
+  
+  
+  /* Shared layout for city sections */
+/* Olympia-specific layout with a background image and overlay text */
+#olympia {
+  width: 100%;
+  height: 70vh;
+  background-image: url('images/washington/olympia.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.olympia-hero {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.olympia-hero h2 {
+  margin-bottom: 50px;
+}
+
+  
+  /* Text container for city sections */
+  .city-text {
+  flex: 1 1 400px;
+  text-align: left;
+  }
+  
+  .city-text h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+  }
+  
+  .city-text h3 {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 20px;
+  }
+  
+  .city-text p {
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
+  }
+  
+  .float-box {
+    float: right;
+    width: 500px;
+    margin: 10%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .float-box h3 {
+    font-size: 1.5rem;
+    color: #037E73;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .float-box ol {
+    padding-left: 20px;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .float-box ol li {
+    margin-bottom: 10px; /* Adjust this value as needed */
+  }
+  
+  
+  
+  
+  /* Unique Explore Aside */
+  /* Unique Cities Section */
+  #unique-cities {
+    background-color: #037E73;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 60px 5%;
+    margin-top: 5%;
+  }
+  
+  #unique-cities-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 50;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  
+  /* Left text panel */
+  #unique-text-container {
+    max-width: 500px;
+  }
+  
+  /* Right column of images */
+  .unique-explore {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  
+  
+  /* Individual image wrapper */
+  .explore-images {
+    max-width: 300px;
+  }
+  
+  
+  .unique-explore .explore-images {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  }
+  .unique-explore img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+  
+  .image-overlay-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  }
+  
+  .explore-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.4s ease;
+  }
+  
+  .image-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  font-family: 'Satisfy', cursive;
+  font-size: 2rem;
+  color: white;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  }
+  
+  .image-overlay-container:hover .explore-image {
+  opacity: 0.5;
+  }
+  
+  .image-overlay-container:hover .image-caption {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  }
+  
+  
+  /* Responsive stacking for mobile */
+  @media (max-width: 768px) {
+  .city-section {
+  flex-direction: column;
+  text-align: center;
+  }
+  
+  .city-text {
+  text-align: center;
+  }
+  }
+  
+/* Container */
+#seattle-hero {
+  margin-top: 5%;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+#seattle-hero-image {
+  width: 100%;
+  height: 80vh;
+  background-image: url('images/washington/seattle.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Wraps the title and button */
+.seattle-hero-content {
+  position: absolute;
+  top: 40%; /* Try 35% or 30% if you want it even higher */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+
+
+
+/* Title styling */
+.seattle-hero-title {
+  font-family: 'Satisfy', cursive;
+  font-size: 8rem;
+  color: white;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+  margin-bottom: none;
+  margin-top: 0;
+}
+
+.seattle-tagline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 60px;
+}
+
+
+
+/* Button styling */
+.seattle-explore-button {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #222;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 10px;
+}
+
+
+.seattle-explore-button:hover {
+  background-color: #333;
+  color: white;
+}
+
+
+  
+
+  /* National Parks Section */
+#parks-section-container {
+  background-color: #037E73;
+  padding: 5%;
+}
+
+  #parks-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5%;
+  max-width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  /* Image container for parks sections */
+  .parks-image-container {
+    display: flex;
+    justify-content: space-between; /* Space evenly across the row */
+    gap: 20px;
+    flex-wrap: nowrap; /* Prevent wrapping to ensure they stay in one line */
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+  }
+  
+
+  #parks-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between images */
+    max-width: 1200px; /* Limit the width of the image container */
+    margin: 0 auto; /* Center the image container */
+  }
+
+  .parks-overlay-container {
+    padding: 2%;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 8px;
+    flex: 1 1 30%;
+  }
+  
+  .parks-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    font-family: 'Satisfy', cursive;
+    font-size: 2.5rem;
+    color: white;
+    opacity: 0;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    text-align: center;
+    pointer-events: none;
+  }
+  
+  .parks-overlay-container:hover .parks-image {
+    opacity: 0.5;
+  }
+  
+  .parks-overlay-container:hover .parks-caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  
+  
+  
+  /* Text container for parks sections */
+  .parks-text {
+  margin-bottom: 30px;
+  text-align: center;
+  }
+  
+  .parks-text h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+  }
+  
+  .parks-text h3 {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 20px;
+  }
+  
+  .parks-text p {
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
+  }
+
+  /*City Pages*/
+/* Hero Image */
+
+
+#hero {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.hero-text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  animation: fadeInHero 1.2s ease-out 0.3s forwards;
+}
+
+#hero h1 {
+  font-family: 'Satisfy', cursive;
+  font-size: 6rem;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+
+#hero h2  {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    margin-top: 10px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  }
+
+
+  /* Text container for intro sections */
+  .about-text {
+    flex: 1 1 400px;
+    text-align: center;
+    max-width: 1200px;     /* limits the width */
+    margin: 0 auto;        /* centers the text block */
+    padding: 50px 50px;       /* adds horizontal breathing room on small screens */
+  }
+
+  .about-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+    
+  .about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+       
+  .about-text p {
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+    /* Image container for intro sections */
+/* Scrolling Gallery Container */
+.about-image-container {
+  display: flex; /* Use Flexbox to align images horizontally */
+  gap: 15px; /* Add spacing between images */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling effect */
+  padding: 20px 0; /* Add padding for spacing */
+  background-color: white; /* Optional: Light background for contrast */
+  max-width: 100%; /* Ensure it spans the full width of the container */
+}
+
+/* Hide the scrollbar for a cleaner look */
+.about-image-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit browsers */
+}
+
+.about-image-container {
+  -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+/* Gallery Images */
+.about-image {
+  width: 300px; /* Set a fixed width for images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Add rounded corners */
+  object-fit: cover; /* Ensure images are cropped nicely */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+/* Scrolling Gallery Container */
+.scrolling-gallery-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation Buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.scroll-btn.left-btn {
+  left: 10px;
+}
+
+.scroll-btn.right-btn {
+  right: 10px;
+}
+
+.scroll-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Guide Section */
+#guide {
+  background-color: #26422b;
+  max-width: 100%;
+  padding: 5%;
+}
+
+#guide h1 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.guide-wrapper {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 5%;
+}
+
+#guide-title h2 {
+  font-size: 3rem;
+  color: #192c1c;
+  margin-top: 5%;
+  text-align: center;
+
+}
+.guide-card {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.guide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+}
+
+
+.guide-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  font-family: 'Satisfy', cursive;
+  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.guide-card:hover .guide-image {
+  opacity: 0.5;
+}
+
+.guide-card:hover .guide-caption {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+  /* Text container for guide sections */
+
+
+/* City Table */
+#table-container {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  border-radius: 12px;
+  max-width: 1000px;
+  margin: 2% auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+}
+
+.table-text {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.table-text h2 {
+  font-size: 2rem;
+  color: #192c1c;
+  margin-bottom: 10px;
+}
+
+.table-text p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.table-content {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: sans-serif;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-content th,
+.table-content td {
+  padding: 15px 20px;
+  text-align: left;
+}
+
+.table-content thead {
+  background-color: #26422b;
+  color: white;
+}
+
+.table-content tbody tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+.table-content tbody tr:hover {
+  background-color: #e0eaff;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.table-content th {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.table-content td {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Contact Form Section */
+.form-background {
+  width: 100vw;
+  height: 85vh;
+  background-image: url('images/washington/washington.cover.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-background::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* 50% dark overlay */
+  z-index: 0;
+}
+
+
+#contact-form {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  position: relative;
+}
+
+
+#contact-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.form-group textarea {
+  resize: vertical; /* Allow vertical resizing only */
+}
+
+/* Submit Button */
+.submit-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #037E73;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #025c56;
+  transform: scale(1.02);
+}
+
+/* ========== RESPONSIVE STYLING ========== */
+
+/* Tablets and small desktops */
+@media (max-width: 1024px) {
+
+  .hero-title,
+  .seattle-hero-title {
+    font-size: 5rem;
+  }
+
+  .hero-subtitle,
+  .seattle-tagline {
+    font-size: 1.75rem;
+  }
+
+  .index-explore-button,
+  .seattle-explore-button {
+    font-size: 1.1rem;
+    padding: 10px 18px;
+  }
+
+  .parks-caption,
+  .guide-caption {
+    font-size: 2rem;
+  }
+
+  .table-content th,
+  .table-content td {
+    font-size: 0.9rem;
+  }
+
+  .form-background {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  #contact-form {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-left,
+  .header-center {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .about-layout {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .parks-image-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #unique-cities-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .guide-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .explore-images {
+    max-width: 100%;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  .hero-title,
+  .seattle-hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle,
+  .seattle-tagline {
+    font-size: 1.25rem;
+  }
+
+  .index-explore-button,
+  .seattle-explore-button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .parks-caption,
+  .guide-caption {
+    font-size: 1.5rem;
+  }
+
+  .table-content th,
+  .table-content td {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+
+  .logo {
+    max-height: 50px;
+  }
+
+  .form-background {
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  #contact-form {
+    width: 95%;
+    padding: 20px;
+  }
+}
+
+  
